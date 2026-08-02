@@ -1,2 +1,4 @@
 kagglehub
 pandas
+nltk
+regex
