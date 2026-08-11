@@ -2,3 +2,5 @@ kagglehub
 pandas
 nltk
 regex
+sklearn
+gensim
