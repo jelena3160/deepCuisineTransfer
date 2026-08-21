@@ -4,3 +4,4 @@ nltk
 regex
 sklearn
 gensim
+torch
