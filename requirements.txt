@@ -1,7 +1,8 @@
 kagglehub
 pandas
+numpy
 nltk
-regex
-sklearn
+scikit-learn
 gensim
 torch
+joblib
