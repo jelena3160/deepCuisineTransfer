@@ -2,5 +2,18 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-data/
+
+# raw/intermediate data stays gitignored - regenerate via 01_preprocessing.ipynb
+data/*
+!data/models/
+
+# only the specific trained artifacts needed to run 02_model.ipynb without retraining are
+# committed (via Git LFS - see .gitattributes); "checkpoint.pt" (latest, not best-by-recon)
+# is intentionally left out as a near-duplicate of checkpoint_best_recon.pt
+data/models/*
+!data/models/checkpoint_best_recon.pt
+!data/models/word2vec.wordvectors
+!data/models/bow_vectorizer.joblib
+!data/models/style_avg_italian.pt
+!data/models/style_avg_indian.pt
 
