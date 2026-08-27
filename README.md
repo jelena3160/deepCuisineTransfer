@@ -25,7 +25,7 @@ Run in order:
 1. **`01_preprocessing.ipynb`** - downloads and cleans the raw recipe data, filters to Italian/Indian recipes, tokenizes, splits into train/val/test, trains the Word2Vec embeddings, and fits the Bag-of-Words vectorizer. Saves everything under `data/` (gitignored - rerun this notebook to regenerate it locally). Word2Vec/BoW artifacts are only rebuilt if missing, so a saved model checkpoint doesn't silently go stale against a different vocabulary if you rerun this notebook.
 2. **`02_model.ipynb`** - loads the artifacts `01_preprocessing.ipynb` produced, trains the GRU encoder/decoder with the multi-task + adversarial classifiers, performs style transfer, and scores it against a held-out test set and an independent evaluation classifier. Training is resumable - rerunning the training cell continues from the best checkpoint on disk instead of starting over.
 
-`seq2seq_vocab.ipynb` is a separate, in-progress vocabulary/embedding exploration notebook.
+`seq2seq_vocab.ipynb` is **not part of the pipeline above** - it's an earlier, standalone exploration of vocabulary/embedding construction, superseded by the vocabulary step inside `02_model.ipynb`. Kept for reference only; not required to reproduce any of the results in this README.
 
 ## Data
 
