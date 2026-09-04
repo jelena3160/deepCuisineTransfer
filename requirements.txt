@@ -3,6 +3,7 @@ pandas
 numpy
 nltk
 scikit-learn
+imbalanced-learn
 gensim
 torch
 joblib
